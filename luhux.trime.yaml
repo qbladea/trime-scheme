@@ -6,7 +6,7 @@ author: luhux #作者資訊
 
 #键盘高度
 height:
-  1: &keyboardheight 47
+  1: &keyboardheight 40
 
 style:
   auto_caps: false #自動句首大寫:true|false|ascii
@@ -277,21 +277,21 @@ preset_keys:
   VOLUME_MUTE: {label: 靜音, send: VOLUME_MUTE}
   # 編輯
   Shift_L: {label: Shift, send: Shift_L, shift_lock: ascii_long}
-  Return: {label: Enter, send: Return}
+  Return: {repeatable: true, label: Enter, send: Return}
   Hide: {label: 隱藏, send: BACK}
   BackSpace: {label: 退格, repeatable: true, send: BackSpace}
-  space: {repeatable: false, functional: false, send: space}
+  space: {repeatable: true, functional: false, send: space}
   Escape: {label: Esc, send: Escape}
-  Home: {label: 行首, send: Home}
+  Home: {repeatable: true, label: 行首, send: Home}
   Insert: {label: 插入, send: Insert}
-  Delete: {label: 刪除, send: Delete}
-  End: {label: 行尾, send: End}
-  Page_Up: {label: 上頁, send: Page_Up}
-  Page_Down: {label: 下頁, send: Page_Down}
-  Left: {label: '←', send: Left}
-  Down: {label: '↓', send: Down}
-  Up: {label: '↑', send: Up}
-  Right: {label: '→', send: Right}
+  Delete: {repeatable: true, label: 刪除, send: Delete}
+  End: {repeatable: true, label: 行尾, send: End}
+  Page_Up: {repeatable: true, label: 上頁, send: Page_Up}
+  Page_Down: {repeatable: true, label: 下頁, send: Page_Down}
+  Left: {repeatable: true, label: '←', send: Left}
+  Down: {repeatable: true, label: '↓', send: Down}
+  Up: {repeatable: true, label: '↑', send: Up}
+  Right: {repeatable: true, label: '→', send: Right}
   select_all: {label: 全选, send: Control+a}
   Clear: {label: 清除, text: "{Control+a}{BackSpace}"} #全選並刪除
   cut: {label: 剪切, send: Control+x}
@@ -363,6 +363,16 @@ preset_keyboards:
     height: *keyboardheight
     lock: true
     keys:
+    - {click: '-'}
+    - {click: '/'}
+    - {click: '<'}
+    - {click: '\'}
+    - {click: '('}
+    - {click: ')'}
+    - {click: Left}
+    - {click: Down}
+    - {click: Up}
+    - {click: Right}
     - {click: 'q'}
     - {click: 'w'}
     - {click: 'e'}
@@ -408,6 +418,16 @@ preset_keyboards:
     width: 10
     height: *keyboardheight
     keys:
+    - {click: '-'}
+    - {click: '/'}
+    - {click: '<'}
+    - {click: '\'}
+    - {click: '('}
+    - {click: ')'}
+    - {click: Left}
+    - {click: Down}
+    - {click: Up}
+    - {click: Right}
     - {click: '!'}
     - {click: '@'}
     - {click: '#'}
@@ -453,6 +473,16 @@ preset_keyboards:
     width: 10
     height: *keyboardheight
     keys:
+    - {click: '-'}
+    - {click: '/'}
+    - {click: '<'}
+    - {click: '\'}
+    - {click: '('}
+    - {click: ')'}
+    - {click: Left}
+    - {click: Down}
+    - {click: Up}
+    - {click: Right}
     - {click: '1'}
     - {click: '2'}
     - {click: '3'}
@@ -474,7 +504,7 @@ preset_keyboards:
     - {click: Up}
     - {click: Right}
     - {width: 5}
-    - {click: Color_settings, width: 10}
+    - {click: Up, width: 10}
     - {click: cut}
     - {click: Clear}
     - {click: copy}

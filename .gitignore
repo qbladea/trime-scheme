@@ -1,3 +1,4 @@
 build/
 *.userdb/
 *.bin
+sync/
